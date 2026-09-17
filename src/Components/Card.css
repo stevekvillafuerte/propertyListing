@@ -1,0 +1,58 @@
+.card{
+    display:flex;
+    flex-direction:column;
+    gap:0.25rem;
+    background-color: #121824; /* Match your dark card background */
+    border-radius: 12px;
+    overflow: hidden; /* Crucial: Clips the image corners to match the card */
+    width: 350px;
+    color:white;
+    position: relative;
+    border:#b5aed26a solid 1px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures the image fills the space nicely without distortion */
+  display: block;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.superhost{
+    position: absolute;
+    top:0.25rem;
+    left:1rem;
+    background-color: #070219; /* A standout color for the badge */
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.capacity{
+    display:flex;
+    gap:0.5rem;
+
+}
+.price-rate{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price-rate >span{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.price-rate >span img{
+    height:1rem;
+}
+
+.card-content > *{
+    margin-bottom:0.5rem;
+}
