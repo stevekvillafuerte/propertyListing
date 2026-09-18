@@ -1,0 +1,147 @@
+.locations {
+  display: flex;
+  gap: 12px;
+  background-color: #1a2230; /* Dark background matching your image */
+  padding: 20px;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.filter-pill {
+  /* Default unselected state (like Sweden / Switzerland) */
+  color: #ffffff;
+  background-color: transparent;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+/* Hide the native checkbox input completely */
+.filter-pill input[type="checkbox"] {
+  display: none;
+}
+
+/* Selected state (like Norway / Finland) */
+.filter-pill:has(input[type="checkbox"]:checked) {
+  background-color: #6b7c96; /* Muted blue-grey background */
+}
+
+/* Optional hover effect */
+.filter-pill:hover {
+  background-color: rgba(107, 124, 150, 0.3);
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: #1a2230; /* Dark background matching your image */
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* --- Toggle Switch Styles --- */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-switch input {
+  display: none; /* Hide native checkbox */
+}
+
+.slider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: #4b5563; /* Off state track color */
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff; /* Thumb color */
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Checked state for toggle switch */
+.toggle-switch input:checked + .slider {
+  background-color: #ffffff; /* On state track color */
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(20px);
+  background-color: #1a2230; /* Thumb color when active */
+}
+
+.toggle-label {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+.dropdown-input {
+  appearance: none; /* Removes native browser dropdown styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #4b5563; /* Outline border */
+  padding: 10px 40px 10px 16px; /* Extra right padding for the custom arrow */
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Hover and focus states */
+.dropdown-input:hover, 
+.dropdown-input:focus {
+  border-color: #ffffff;
+}
+
+/* Style the dropdown options list background so it isn't transparent */
+.dropdown-input option {
+  background-color: #1a2230;
+  color: #ffffff;
+}
+
+/* Custom dropdown arrow positioning */
+.custom-select-wrapper .arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: #ffffff;
+  pointer-events: none; /* Allows clicks to pass through to the select element */
+}
+
+
+
+.filterbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a2230;
+}

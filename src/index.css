@@ -20,6 +20,10 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  background-color: #121824;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 6. Improve media defaults */

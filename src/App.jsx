@@ -1,26 +1,23 @@
 import { useState,useEffect } from 'react'
 import './App.css'
-import Card from './Components/Card.jsx'
-
+import CardContainer from './Components/CardContainer'
+import FilterBar from './Components/FilterBar'
 function App() {
-  // const [properties, setProperties] = useState([]);
   const [data, setData] = useState([]);
-
   useEffect(() => {
         fetch(
         "https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/property-listing-data.json"
         )
         .then((response) => response.json())
         .then((data) => {
-            setData(data[0]);
-            console.log(data)
+            setData(data);
         })
     }, [])
 
   return (
     <>
-
-    
+      <FilterBar/>
+      <CardContainer datas={data}/>
       
     </>
   )
