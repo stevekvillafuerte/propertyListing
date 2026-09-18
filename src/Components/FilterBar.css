@@ -143,5 +143,54 @@
 .filterbar{
     display: flex;
     justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
     background-color: #1a2230;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 220px;
+  margin-left: 20px;
+  padding: 9px 14px;
+  border: 1px solid #4b5563;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.search-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.search-field input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.search-field input::placeholder {
+  color: #aab4c3;
+}
+
+.search-field:focus-within {
+  border-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .search-field {
+    flex: 1 1 100%;
+    margin: 16px 20px 0;
+  }
+
+  .filterbar {
+    gap: 0;
+  }
 }
