@@ -17,7 +17,7 @@ function Card({ property }) {
                 <div className="price-rate">
                     <p className="price">${property.price}<span>/Night</span></p>
                     <span>
-                        <img src="../public/images/starfill.svg" alt="star" />
+                        <img src="/images/Starfill.svg" alt="star" />
                         <p>{property.rating}</p>
                     </span>
                 </div>

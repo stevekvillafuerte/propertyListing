@@ -13,14 +13,14 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
             setData(data[0]);
-            console.log(data[0].capacity.bedroom)
+            console.log(data)
         })
     }, [])
 
   return (
     <>
-      
-      <Card property={data} />
+
+    
       
     </>
   )
